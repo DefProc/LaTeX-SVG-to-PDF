@@ -45,7 +45,7 @@ RERUNBIB = "No file.*\.bib|Citation.*undefined"
 COPY = if test -r $(<:%.tex=%.toc); then cp $(<:%.tex=%.toc) $(<:%.tex=%.toc.bak); fi 
 RM = rm -f
 
-.PHONY : all pdf images clean clean-all clean-images
+.PHONY : all pdf images clean-all clean clean-pdf tidy clean-images
 
 all : images pdf 
 
