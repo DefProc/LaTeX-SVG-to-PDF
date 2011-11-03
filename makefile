@@ -53,7 +53,7 @@ all : images pdf
 # Generate pdf output file
 pdf: $(PDF)
 
-$(PDF) : $(SRC) $(wildcard *.tex) $(wildcard *.bbl) $(FIG) $(FIGTEX)
+$(PDF) : $(SRC) $(wildcard *.tex) $(wildcard *.bib) $(FIG) $(FIGTEX)
 	# Run LaTeX
 	$(COPY); $(LATEX) $< && true
 	# Run BibTeX if needed
