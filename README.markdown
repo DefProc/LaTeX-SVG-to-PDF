@@ -14,7 +14,7 @@ How to use
 ----------
 Download the makefile to your LaTeX project directory, or clone the repository:
 
-	git clone git@github.com:DefProc/LaTeX-SVG-to-PDF.git
+	git clone git://github.com/DefProc/LaTeX-SVG-to-PDF.git
 
 and add a symlink of the `makefile` in your project directory
 
