@@ -4,8 +4,9 @@ LaTeX+SVG to PDF makefile
 A Makefile to create pdf files from LaTeX source with embedded SVG images.
 
 Sources include: 
- * [http://www.acoustics.hut.fi/u/mairas/UltimateLatexMakefile](http://www.acoustics.hut.fi/u/mairas/UltimateLatexMakefile)
- * [http://www.takeonthecity.nl/roels-latex-makefile/](http://www.takeonthecity.nl/roels-latex-makefile/)
+
+*   [http://www.acoustics.hut.fi/u/mairas/UltimateLatexMakefile](http://www.acoustics.hut.fi/u/mairas/UltimateLatexMakefile)
+*   [http://www.takeonthecity.nl/roels-latex-makefile/](http://www.takeonthecity.nl/roels-latex-makefile/)
 
 Requires [Inkscape](http://inkscape.org) for svg to pdf conversion.
 
