@@ -71,6 +71,7 @@ $(PDF) : $(SRC) $(TEX_SRC) $(wildcard *.sty) $(wildcard *.bib) $(FIG) $(FIGTEX)
 	if cmp -s $(<:%.tex=%.toc) $(<:%.tex=%.toc.bak); then true; else $(LATEX) $< ; fi; true
 	$(RM) $(<:%.tex=%.toc.bak)
 	# Display relevant warnings
+	egrep -i "Warning--" $(<:%.tex=%.blg)
 	egrep -i "(Reference|Citation|Label).*(undefined|multiply defined)" $(<:%.tex=%.log)
 
 
