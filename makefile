@@ -28,12 +28,17 @@
 LATEX	= xelatex -interaction=batchmode
 BIBTEX	= bibtex
 
+# Include files in sub-folders as per Project Structure Guidelines:
+# http://en.wikibooks.org/wiki/LaTeX/General_Guidelines#Project_structure
+# Set folder location of tex file components (input and included files) 
+TEX_SRC_DIR = tex
 # Set sub-folder location of svg image sources
 GRAPHIC_DIR = images
 
 # TeX input and pdf output files
 SRC	:= $(shell egrep -l '^[^%]*\\begin\{document\}' *.tex)
 PDF	= $(SRC:%.tex=%.pdf)
+TEX_SRC = $(wildcard $(TEX_SRC_DIR)/*.tex)
 # Finding the required images
 FIGSRC	:= $(wildcard $(GRAPHIC_DIR)/*.svg)
 FIG	:= $(FIGSRC:%.svg=%.pdf)
@@ -53,7 +58,7 @@ all : images pdf
 # Generate pdf output file
 pdf: $(PDF)
 
-$(PDF) : $(SRC) $(wildcard *.tex) $(wildcard *.bib) $(FIG) $(FIGTEX)
+$(PDF) : $(SRC) $(TEX_SRC) $(wildcard *.sty) $(wildcard *.bib) $(FIG) $(FIGTEX)
 	# Run LaTeX
 	$(COPY); $(LATEX) $< && true
 	# Run BibTeX if needed
