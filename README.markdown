@@ -12,11 +12,23 @@ Requires [Inkscape](http://inkscape.org) for svg to pdf conversion.
 
 How to use
 ----------
-Download the makefile to your LaTeX project directory, or clone the repository:
+To use this file singly, download the makefile to your LaTeX project directory.
+
+If you'd like to keep your makefile synchronised with any updates to this repo,
+clone the repository:
 
 	git clone git://github.com/DefProc/LaTeX-SVG-to-PDF.git
 
 and add a symlink of the `makefile` in your project directory
+
+Or, if you're using git as the version tracking for your LaTeX project,
+add this repository as a submodule and symlink the makefile:
+
+	git submodule add git://github.com/DefProc/LaTeX-SVG-to-PDF.git
+	ln -s LaTeX-SVG-to-PDF/makefile makefile
+	git add LaTeX-SVG-to-PDF/
+	git commit -m "added LaTeX-SVG-to-PDF as submodule and linked to makefile"	
+
 
 then run:
 
